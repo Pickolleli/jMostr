@@ -1,0 +1,3 @@
+-keep class com.nostr.jmostr.** { *; }
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+-dontwarn org.conscrypt.**
