@@ -1,12 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET"/>
-    <application android:allowBackup="false" android:label="jMostr">
+    <application
+        android:allowBackup="false"
+        android:label="jMostr"
+        android:theme="@style/Theme.jMostr">
         <activity android:name=".ui.LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.FeedActivity"/>
+        <activity android:name=".ui.MainActivity"/>
     </application>
 </manifest>

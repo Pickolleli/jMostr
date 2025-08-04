@@ -1,9 +1,8 @@
-package com.nostr.jmostr
+package com.nostr.jmostr.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.nostr.jmostr.ui.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
