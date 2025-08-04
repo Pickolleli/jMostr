@@ -45,14 +45,10 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
-    implementation("com.google.android.exoplayer:exoplayer:2.19.1")
-    implementation("io.coil-kt.coil3:coil-compose:3.0.0-alpha06")
-    implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.0-alpha06")
+
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.google.android.exoplayer:exoplayer:2.19.1")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     implementation("fr.acinq.secp256k1:secp256k1-kmp-jni-android:0.15.0")
-
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+
