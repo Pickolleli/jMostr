@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.nostr.jmostr">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ATTENZIONE: rimossi attributi potenzialmente problematici -->
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
         android:supportsRtl="true"
+        android:theme="@style/Theme.jMostr"
         tools:targetApi="34">
 
-        <!-- Activity principale con intent-filter -->
         <activity
             android:name=".ui.LoginActivity"
             android:exported="true">
@@ -20,7 +18,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Seconda activity senza intent-filter -->
         <activity
             android:name=".ui.FeedActivity"
             android:exported="false"/>

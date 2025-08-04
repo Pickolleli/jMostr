@@ -1,14 +1,13 @@
 package com.nostr.jmostr.model
 
-import kotlinx.serialization.Serializable
+import java.io.Serializable
 
-@Serializable
 data class NostrEvent(
     val id: String,
-    val pubKey: String,
-    val createdAt: Long,
+    val pubkey: String,
+    val created_at: Long,
     val kind: Int,
     val tags: List<List<String>>,
     val content: String,
     val sig: String
-)
+) : Serializable
