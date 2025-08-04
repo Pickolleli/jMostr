@@ -1,4 +1,3 @@
-// Crea se non esiste: app/src/main/java/com/nostr/jmostr/MainApplication.kt
 package com.nostr.jmostr
 
 import android.app.Application

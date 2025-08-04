@@ -1,4 +1,3 @@
-// Crea un nuovo file in: app/src/main/java/com/nostr/jmostr/utils/KeyManager.kt
 package com.nostr.jmostr.utils
 
 import android.content.Context
@@ -19,7 +18,7 @@ object KeyManager {
 
         val sharedPrefs = EncryptedSharedPreferences.create(
             context,
-            "nsec_secure_prefs",
+            "nsec_secure_store",
             masterKey,
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
@@ -29,19 +28,13 @@ object KeyManager {
     }
 
     fun getKey(): ByteArray? {
-        val masterKey = MasterKey.Builder(context)
-            .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
-            .build()
-
         val sharedPrefs = EncryptedSharedPreferences.create(
             context,
-            "nsec_secure_prefs",
-            masterKey,
+            "nsec_secure_store",
+            MasterKey.Builder(context).setKeyScheme(MasterKey.KeyScheme.AES256_GCM).build(),
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
         )
-
-        val hex = sharedPrefs.getString("nsec_key", null)
-        return hex?.chunked(2)?.map { it.toInt(16).toByte() }?.toByteArray()
+        return sharedPrefs.getString("nsec_key", null)?.chunked(2)?.map { it.toInt(16).toByte() }?.toByteArray()
     }
 }

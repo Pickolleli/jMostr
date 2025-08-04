@@ -1,4 +1,3 @@
-<!-- Aggiungi queste righe: -->
 <application
     android:name=".MainApplication"
     ...>
