@@ -24,5 +24,5 @@
 
         <activity
             android:name=".ui.FeedActivity"
-            android:exported="false" />
+            android:exported="false"/>
     </manifest>
