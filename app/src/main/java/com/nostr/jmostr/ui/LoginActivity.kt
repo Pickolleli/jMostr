@@ -1,4 +1,4 @@
-package com.nostr.jmostr.ui
+package com.nostr.jmostr.ui  // <-- Assicurati che questa sia la prima riga
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,15 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.nostr.jmostr.R  // <-- Import manuale di R
 import com.nostr.jmostr.utils.KeyManager
-import android.widget.EditText
-import android.widget.Button
-
-setContentView(R.layout.activity_login)
-
-val editText = findViewById<EditText>(R.id.etNsec)
-val loginButton = findViewById<Button>(R.id.btnNsec)
-val amberButton = findViewById<Button>(R.id.btnAmber)
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,11 +27,11 @@ class LoginActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnAmber).setOnClickListener {
-            // Lancia intent Amber (NIP-07)
             startActivity(Intent(this, FeedActivity::class.java))
             finish()
         }
     }
 }
 
+// Estensione per decodifica esadecimale
 fun String.decodeHex(): ByteArray = chunked(2).map { it.toInt(16).toByte() }.toByteArray()
