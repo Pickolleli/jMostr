@@ -2,7 +2,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="false"
-        android:label="jMostr">
+        android:label="jMostr"
+        android:theme="@style/Theme.MaterialComponents.DayNight">
         <activity
             android:name=".ui.FeedActivity"
             android:exported="true">

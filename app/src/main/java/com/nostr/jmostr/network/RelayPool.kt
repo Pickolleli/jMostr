@@ -11,6 +11,7 @@ class RelayPool {
     val defaultRelays = listOf(
         "wss://relay.damus.io",
         "wss://nos.lol",
+        "wss://relay.primal.net",
         "wss://relay.primal.net"
     )
 
